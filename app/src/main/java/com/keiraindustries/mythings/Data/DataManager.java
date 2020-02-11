@@ -9,14 +9,19 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 /**
- * Created by tom on 2/4/20.
+ * Created by keira on 2/4/20.
  */
 
 public class DataManager {
     private static DataManager single_instance=null;
+	
+	public static final String THING_MAP_FNAME;
+	
 
-    HashMap<Integer, Thing> thingMap;       //This object relates the thing ID numbers with the thing definitions
+    ThingMap thingMap;
+	Category mainCat;
     Gson gson;
+	SettingsLog settingsLog;
 
     // static method to create instance of Singleton class
     public static DataManager instance()
@@ -31,6 +36,16 @@ public class DataManager {
 
     private DataManager() {
         gson = new Gson();
+		
+		//Load settingsLog
+		
+		//Load thingMap
+		
+		//Load Category chain
+		
+		//Load relevant dataUnits
+			//Determine date range, and applicable dataUnit names
+			//Check if available, and load
 
     }
 

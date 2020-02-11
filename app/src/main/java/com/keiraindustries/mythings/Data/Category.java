@@ -9,8 +9,9 @@ import java.util.ArrayList;
 
 public class Category implements Serializable {
 
-    private String title;
-    private ArrayList<Integer> subThings;		//List of things by ID in this category
+    String title;
+    ArrayList<Integer> subThings;		//List of things by ID in this category
+	ArrayList<Category> subThings;
     //Test
 
 }
