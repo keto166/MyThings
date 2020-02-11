@@ -11,5 +11,6 @@ public class Category implements Serializable {
 
     private String title;
     private ArrayList<Integer> subThings;		//List of things by ID in this category
+    //Test
 
 }
