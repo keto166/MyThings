@@ -10,7 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.keiraindustries.mythings.Data.DataManager;
 import com.keiraindustries.mythings.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        rvCatList = findViewById(R.id.rvCatList);
-        rvCatList.setHasFixedSize(true);
-        rvCatList.setLayoutManager(new LinearLayoutManager(this));
+//        rvCatList = findViewById(R.id.rvCatList);
+//        rvCatList.setHasFixedSize(true);
+//        rvCatList.setLayoutManager(new LinearLayoutManager(this));
+        DataManager.instance().initialize(getApplicationContext());
+
 
 
     }

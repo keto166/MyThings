@@ -9,12 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.keiraindustries.myjournal.Activities.BlogEntryListActivity;
-import com.keiraindustries.myjournal.Activities.BlogPostView;
-import com.keiraindustries.myjournal.Data.JournalData;
-import com.keiraindustries.myjournal.Model.Blog;
-import com.keiraindustries.myjournal.R;
 import com.keiraindustries.mythings.Data.Category;
+import com.keiraindustries.mythings.R;
 
 import java.util.Date;
 import java.util.List;
@@ -27,14 +23,13 @@ public class CatListRVAdapter extends RecyclerView.Adapter<CatListRVAdapter.MyVi
 
     private List<Category> catList;
     private Context context;
-    public BlogEntryListActivity blogListAct;
+//    public BlogEntryListActivity blogListAct;
 
-    public CatListRVAdapter() {
-        this();
-        this.catList = JournalData.getInstance().getBlogList();
-        this.context = blogListAct;
-        this.blogListAct = blogListAct;
-    }
+//    public CatListRVAdapter() {
+//        this.catList = JournalData.getInstance().getBlogList();
+//        this.context = blogListAct;
+//        this.blogListAct = blogListAct;
+//    }
 
     public CatListRVAdapter() {
         super();
@@ -49,31 +44,31 @@ public class CatListRVAdapter extends RecyclerView.Adapter<CatListRVAdapter.MyVi
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        holder.blog = catList.get(position);
-
-        holder.tvEntryTitle.setText(holder.blog.getTitle());
-        holder.tvEntryDate.setText(JournalData.getInstance().getDateFormat().format(new Date(holder.blog.getEntryDate())));
-        holder.itemView.setBackgroundColor(Color.argb(0,0,0,0));
-
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                blogListAct.deletePopup(holder, v);
-                return false;
-            }
-        });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent intent = new Intent(context, BlogPostView.class);
-                JournalData.getInstance().setActiveBlog(holder.getAdapterPosition());
-                context.startActivity(intent);
-
-
-            }
-        });
+//        holder.blog = catList.get(position);
+//
+//        holder.tvEntryTitle.setText(holder.blog.getTitle());
+//        holder.tvEntryDate.setText(JournalData.getInstance().getDateFormat().format(new Date(holder.blog.getEntryDate())));
+//        holder.itemView.setBackgroundColor(Color.argb(0,0,0,0));
+//
+//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                blogListAct.deletePopup(holder, v);
+//                return false;
+//            }
+//        });
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                Intent intent = new Intent(context, BlogPostView.class);
+//                JournalData.getInstance().setActiveBlog(holder.getAdapterPosition());
+//                context.startActivity(intent);
+//
+//
+//            }
+//        });
 
     }
 
@@ -85,15 +80,15 @@ public class CatListRVAdapter extends RecyclerView.Adapter<CatListRVAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView tvEntryTitle;
-        public TextView tvEntryDate;
-        public Blog blog;
+//        public TextView tvEntryTitle;
+//        public TextView tvEntryDate;
+//        public Blog blog;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            tvEntryTitle = itemView.findViewById(R.id.tvEntryCardTitle);
-            tvEntryDate = itemView.findViewById(R.id.tvEntryCardDate);
+//            tvEntryTitle = itemView.findViewById(R.id.tvEntryCardTitle);
+//            tvEntryDate = itemView.findViewById(R.id.tvEntryCardDate);
 
         }
 
